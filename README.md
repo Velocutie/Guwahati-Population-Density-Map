@@ -776,7 +776,7 @@ The project also highlights an important GIS principle:
 
 # 👤 Author
 
-**Yugant Singh**
+**Archit Dhruw**
 
 **Project:** Mapping Population Density of Guwahati Using GIS
 
