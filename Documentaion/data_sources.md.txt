@@ -1,0 +1,53 @@
+# Data Sources
+
+## 1. Guwahati Municipal Corporation Ward Boundaries
+
+The spatial framework of the project is based on the 60-ward structure of Guwahati Municipal Corporation.
+
+The ward boundary dataset contains polygon features representing individual GMC wards.
+
+---
+
+## 2. Population Data
+
+The population data used in the analysis are Census 2011-based ward-level population figures.
+
+The population values were entered into the GIS attribute table and associated with the corresponding ward.
+
+---
+
+## 3. GIS Processing
+
+Spatial processing and cartographic production were performed in ArcMap.
+
+The original geographic coordinate system was:
+
+`GCS WGS 1984`
+
+The analysis layer was projected to:
+
+`WGS 1984 UTM Zone 46N`
+
+This projected layer was used for area and population-density calculations.
+
+---
+
+## 4. Data Citation
+
+When publishing or presenting this project, the original providers of the ward boundary and population datasets should be credited.
+
+The project should clearly distinguish between:
+
+- Ward boundary data
+- Census population data
+- Calculated area
+- Calculated population density
+- GIS-derived map outputs
+
+---
+
+## 5. Data Limitation
+
+The population figures are Census 2011-based and therefore represent historical population information rather than current population estimates.
+
+The project uses the 60-ward spatial framework for the GIS analysis, and this temporal difference should be considered when interpreting the results.
