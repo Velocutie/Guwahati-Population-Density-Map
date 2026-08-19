@@ -1,0 +1,183 @@
+# Methodology
+
+## 1. Project Objective
+
+The objective of this project is to map and analyse population density across the 60 wards of Guwahati Municipal Corporation (GMC) using Geographic Information System (GIS) techniques.
+
+The project uses ward-level population information and spatial boundaries to calculate population density and represent its spatial variation through a choropleth map.
+
+---
+
+## 2. Study Area
+
+The study area is Guwahati Municipal Corporation, located in Assam, India.
+
+For this analysis, the study area is represented using the 60 GMC ward boundaries.
+
+Guwahati provides a useful case for population-density mapping because of its varied urban development, transportation network, physical geography and distribution of built-up areas.
+
+---
+
+## 3. Spatial Data
+
+A GIS polygon layer representing the 60 GMC wards was used as the primary spatial dataset.
+
+The ward layer contains attributes identifying individual wards. The `sourceward` field was used to identify the corresponding ward numbers.
+
+The original layer was provided in the geographic coordinate system:
+
+`GCS WGS 1984`
+
+---
+
+## 4. Coordinate System
+
+Because population density requires the calculation of ward area, the original geographic layer was projected into:
+
+`WGS 1984 UTM Zone 46N`
+
+The projected coordinate system uses metres and allows area calculations to be performed in appropriate linear units.
+
+The original layer was retained, while a separate projected layer was created for analysis.
+
+---
+
+## 5. Population Data
+
+A `Population` field was added to the ward attribute table.
+
+The population values were entered according to the corresponding ward numbers.
+
+The population figures used in this project are Census 2011-based figures.
+
+Therefore, the population values should not be interpreted as current 2026 population estimates.
+
+---
+
+## 6. Ward Area Calculation
+
+A new field named `Area_km2` was created.
+
+The field type was set to:
+
+`Double`
+
+The area of each ward was calculated in square kilometres using the projected WGS 1984 UTM Zone 46N layer.
+
+---
+
+## 7. Population Density Calculation
+
+A new field named `Density` was created.
+
+The population density was calculated using:
+
+Population Density = Population / Area
+
+In ArcMap Field Calculator, the calculation was performed using:
+
+`[Population] / [Area_km2]`
+
+The resulting values represent:
+
+`persons/km²`
+
+---
+
+## 8. Choropleth Mapping
+
+The calculated `Density` field was used to create a choropleth map.
+
+The ArcMap symbology method used was:
+
+`Quantities → Graduated Colors`
+
+The density values were divided into five classes.
+
+The classification method used was:
+
+`Natural Breaks (Jenks)`
+
+This classification was selected because the density values vary considerably between wards.
+
+---
+
+## 9. Cartographic Design
+
+The final map includes the following cartographic elements:
+
+- Title
+- Ward boundaries
+- Graduated colour scheme
+- Population-density legend
+- North arrow
+- Scale bar
+- Data source
+- Coordinate system information
+
+The title of the map is:
+
+`Population Density of Guwahati Municipal Corporation (60 Wards)`
+
+---
+
+## 10. Software
+
+The project was created using:
+
+`ArcMap`
+
+ArcMap was used for:
+
+- Spatial data management
+- Attribute editing
+- Coordinate projection
+- Area calculation
+- Population-density calculation
+- Choropleth mapping
+- Cartographic layout
+- Map export
+
+---
+
+## 11. Workflow
+
+The complete GIS workflow was:
+
+1. Obtain the 60-ward boundary layer.
+2. Import the layer into ArcMap.
+3. Inspect the attribute table.
+4. Identify the ward-number field.
+5. Add the `Population` field.
+6. Enter ward-wise population values.
+7. Project the layer into WGS 1984 UTM Zone 46N.
+8. Add the `Area_km2` field.
+9. Calculate ward area.
+10. Add the `Density` field.
+11. Calculate population density.
+12. Apply Graduated Colors symbology.
+13. Use Natural Breaks (Jenks) classification.
+14. Create the map layout.
+15. Add title, legend, north arrow and scale bar.
+16. Add source and coordinate-system information.
+17. Export the final map.
+
+---
+
+## 12. Data Limitation
+
+The project combines the current 60-ward spatial framework with Census 2011-based population information.
+
+Therefore, the resulting map should be interpreted as a population-density analysis using the 60-ward geographic framework and Census 2011 population data.
+
+It should not be interpreted as an exact representation of population density in 2026.
+
+Updated ward-level population data would be required for a current population-density assessment.
+
+---
+
+## 13. Expected Output
+
+The final output is a choropleth map showing the spatial variation of population density across the 60 wards of Guwahati Municipal Corporation.
+
+The map can be used to identify relatively high-density and low-density areas and provides a foundation for further GIS-based analysis of factors influencing population distribution.
