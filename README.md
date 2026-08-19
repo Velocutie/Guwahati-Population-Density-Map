@@ -1,5 +1,4 @@
 # Guwahati-Population-Density-Map
-Yep. Here is the **entire README as one Markdown code block**. You can copy everything inside directly into `README.md`.
 
 ````markdown
 # 🗺️ Mapping Population Density of Guwahati Using GIS
